@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<table>
+    {% for book in book_list %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.price}}</td>
+            <td>{{ book.data|date:"Y-m-d"}}</td>
+            <td>{{ book.publish.name }}</td>
+            <td>{{ book.authors.all }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button class="get_service">洗剪吹</button>
+</body>
+<script>
+    function egon(arg) {
+        console.log(arg);
+        var data = JSON.parse(arg);
+        console.log(typeof arg);
+    }
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="http://127.0.0.1:8001/service/"></script>
+<script>
+    $(".get_service").click(function () {
+        var ele_script = $("<script>")
+        ele_script.attr("src", "http://127.0.0.1:8001/service/")
+        $("body").append(ele_script)
+    })
+</script>
+</html>
