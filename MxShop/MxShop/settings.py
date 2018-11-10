@@ -41,10 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.users.apps.UsersConfig',
     "DjangoUeditor",
-    "users",
-    "goods",
-    "trade",
-    "user_operation",
+    "goods.apps.GoodsConfig",
+    "trade.apps.TradeConfig",
+    "user_operation.apps.UserOperationConfig",
+    "django_filters",
+    "crispy_forms",
+    "xadmin",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -113,17 +116,19 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
